@@ -3,7 +3,6 @@ from tkinter import ttk
 import sys
 from multiprocessing import Process
 import os
-
 from tool.Compile_Pytoso import CompileWindow
 from tool.Error_Windows import ErrorAWindow
 from tool.Restart_Services import FunctionAWindow
