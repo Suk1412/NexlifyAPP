@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=WX Tool
+Comment=A collection of tools
+Exec=/home/wx/work/小代码/NexlifyAPP/venv/bin/python /home/wx/work/小代码/NexlifyAPP/wx_Tool.py
+Icon=/home/wx/work/小代码/NexlifyAPP/wxtool.png
+Terminal=True
+Type=Application
+Categories=Utility;Application;
+    

@@ -1,0 +1,2 @@
+更新桌面UI
+update-desktop-database ~/.local/share/applications

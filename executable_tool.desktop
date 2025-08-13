@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Executable Tool
+Comment=A collection of tools
+Exec=/usr/bin/python3 /home/wx/work/小代码/NexlifyAPP/Executable_Tool.py
+Icon=/home/wx/work/小代码/NexlifyAPP/desk.png
+Terminal=True
+Type=Application
+Categories=Utility;Application;

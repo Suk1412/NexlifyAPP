@@ -3,6 +3,7 @@ __pycache__
 .idea
 demo.py
 *test.py
+venv/
 
 
 
