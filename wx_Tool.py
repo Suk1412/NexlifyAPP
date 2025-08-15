@@ -1,7 +1,8 @@
 import wx
-from wx_windows.Compile_Pytoso import CompileFrame
-from wx_windows.Restart_Services import FunctionAFrame
-from wx_windows.Zigbee_Sniffer import FunctionBFrame
+from wx_windows.Compile_Pytoso_Window import CompileFrame
+from wx_windows.Nogram_Window import NogramFrame
+from wx_windows.Restart_Services_Window import FunctionAFrame
+from wx_windows.Zigbee_Sniffer_Window import FunctionBFrame
 
 
 class MyFrame(wx.Frame):
@@ -9,14 +10,15 @@ class MyFrame(wx.Frame):
         super().__init__(*args, **kw)
         self.functions = {"单独文件so编译工具":lambda:self.open_window(self.main_pnl, "单独文件so编译工具", (400, 300), CompileFrame),
                           "重启wisdom服务":lambda:self.open_window(self.main_pnl, "单独文件so编译工具", (400, 300), FunctionAFrame),
-                          "ZigBee Sniffer":lambda:self.open_window(self.main_pnl, "单独文件so编译工具", (400, 300), FunctionBFrame)}
+                          "ZigBee Sniffer":lambda:self.open_window(self.main_pnl, "单独文件so编译工具", (400, 300), FunctionBFrame),
+                          "Nonogram":lambda:self.open_window(self.main_pnl, "Nonogram", (175, 200), NogramFrame)}
         self.selected_option = list(self.functions.keys())
         self.InitUI()
 
     def InitUI(self):
         self.main_pnl = wx.Panel(self)
         self.label = wx.StaticText(self.main_pnl, label="请选择一个工具")
-        self.cb = wx.ComboBox(self.main_pnl, pos=(50, 30), choices=self.selected_option, style=wx.CB_READONLY, value=self.selected_option[2])
+        self.cb = wx.ComboBox(self.main_pnl, pos=(50, 30), choices=self.selected_option, style=wx.CB_READONLY, value=self.selected_option[3])
         self.button_usb = wx.Button(self.main_pnl, label="使用")
         self.button_usb.Bind(wx.EVT_BUTTON, self.button_click)
         self.button_expand = wx.Button(self.main_pnl, label="使用")

@@ -3,7 +3,7 @@ import os
 import subprocess
 
 class CompileFrame(wx.Frame):
-    def __init__(self, parent=None, title="单独文件so编译工具", size=(500, 200)):
+    def __init__(self, parent=None, title="新窗口", size=(500, 200)):
         super().__init__(parent, title=title, size=size)
         panel = wx.Panel(self)
 
@@ -35,6 +35,8 @@ class CompileFrame(wx.Frame):
         panel.SetSizer(vbox)
         self.Centre()
         self.Show()
+        self.Raise()      # 提升到最前面
+        self.SetFocus()   # 获取焦点
 
     def on_browse(self, event):
         with wx.FileDialog(

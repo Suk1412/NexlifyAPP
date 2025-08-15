@@ -2,7 +2,7 @@ import wx
 import subprocess
 
 class FunctionBFrame(wx.Frame):
-    def __init__(self, parent=None, title="Zigbee Sniffer", size=(500, 200)):
+    def __init__(self, parent=None, title="新窗口", size=(500, 200)):
         super().__init__(parent, title=title, size=size)
         panel = wx.Panel(self)
         main_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -24,6 +24,8 @@ class FunctionBFrame(wx.Frame):
         panel.SetSizer(main_sizer)
         self.Centre()
         self.Show()
+        self.Raise()      # 提升到最前面
+        self.SetFocus()   # 获取焦点
 
     def start_sniff(self, event):
         channel = self.channel_txt.GetValue()

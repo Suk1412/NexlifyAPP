@@ -2,7 +2,7 @@ import wx
 import subprocess
 
 class FunctionAFrame(wx.Frame):
-    def __init__(self, parent=None, title="单独文件so编译工具", size=(500, 200)):
+    def __init__(self, parent=None, title="新窗口", size=(500, 200)):
         super().__init__(parent, title=title, size=size)
         panel = wx.Panel(self)
 
@@ -40,6 +40,8 @@ class FunctionAFrame(wx.Frame):
 
         self.Centre()
         self.Show()      
+        self.Raise()      # 提升到最前面
+        self.SetFocus()   # 获取焦点
 
     def run_command(self, cmd=None):
         self.output_text.Clear()
